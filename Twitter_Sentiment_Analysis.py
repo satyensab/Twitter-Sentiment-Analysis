@@ -19,33 +19,6 @@ from googletrans import Translator
 import emoji
 
 
-# retrieve Twitter API Key (because their is a query limit, I have already provided the tweeter data in the directory, this is just how I did it
-# def retrieve_tweets():
-#     consumer_key = 'ed3zJTxlTk8ocVAqgg3NtBfTe'
-#     bearer_token = 'AAAAAAAAAAAAAAAAAAAAAPn9mwEAAAAAo1q64%2FDK3z%2Br2vpgI4pbNCvVLFU%3D2YV70psvQTFHAZfMiDGOBbgvdl3j28YT39lAygMi7V6hKQ8udQ'
-#     consumer_secret = 'tM0gzjaJbzworjY8PPYGoCJnNMdkNV5w6UgxWxDbJZixuzmhpg'
-#     access_token = '1651005753153519616-ck9SDaj71TV0mWXH88StTvlgcOAHHT'
-#     access_token_secret = 'yLldhCiM55YzrTPTc6nMFnjijBdEJzxYjIz8y70d0WiNW'
-#
-#     #Authenticate to Twitter
-#     auth = tw.OAuthHandler(consumer_key, consumer_secret)
-#     auth.set_access_token(access_token, access_token_secret)
-#     api = tw.API(auth, wait_on_rate_limit=True)
-#
-#     #Get tweets and store them into a dictionary
-#     hashtag = '#StarWarsJediSurvivor'
-#     tweets = tw.Cursor(api.search_tweets, q=hashtag).items(1000)
-#     tweets = [{'Tweets': tweet.text, 'Timestamp': tweet.created_at} for tweet in tweets]
-#     #Code for using Twitter API,authenticating to Twitter, and putting it into a dictionary is from
-#     #Resource: https://www.youtube.com/watch?v=_EgqxIoUE7U&list=LL&index=6&t=489s&ab_channel=NicholasRenotte
-#
-#     #Converts the created dictionary to dataframe and csv for use
-#     df = pd.DataFrame.from_dict(tweets)
-#     df.to_csv("Star_Wars_Tweets.csv", index=False)
-#
-#     #Code Above is how I was able to accces tweets using the twitter api, as there is a limit query and quering it take
-#     #some time I converted it into a dataframe. But this csv I created is not from a source online but a dictionary I
-#     #created using the tutorial mentioned above
 
 def pre_processing(df):
     # Gets stopwords
